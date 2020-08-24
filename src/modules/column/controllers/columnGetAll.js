@@ -1,7 +1,7 @@
-import Todo from '../todoModel';
+import Column from '../columnModel';
 
-const todoGetAll = (req, res) => {
-  Todo.find()
+const columnGetAll = (req, res) => {
+  Column.find()
     // .populate({ // Feature like JOIN in SQL
     // path: 'members',
     // match: { age: { $gte: 21 } },
@@ -19,4 +19,4 @@ const todoGetAll = (req, res) => {
     });
 };
 
-export default todoGetAll;
+export default columnGetAll;

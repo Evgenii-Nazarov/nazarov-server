@@ -1,15 +1,15 @@
-import Todo from '../todoModel';
+import Column from '../columnModel';
 
-const todoGetById = (req, res) => {
-  const id = req.params.todoId;
-  Todo.findById(id)
+const columnGetById = (req, res) => {
+  const id = req.params.columnId;
+  Column.findById(id)
     .select('-__v')
     .exec()
     .then(doc => {
       if (doc) {
         res.status(200).json(doc);
       } else {
-        res.status(404).json('No todo for provided id');
+        res.status(404).json('No column for provided id');
       }
     })
     .catch(err => {
@@ -18,4 +18,4 @@ const todoGetById = (req, res) => {
     });
 };
 
-export default todoGetById;
+export default columnGetById;

@@ -9,9 +9,18 @@ const todoSchema = mongoose.Schema(
       required: false,
       default: '',
     },
-    done: Boolean,
+    priority: {
+      type: Number,
+      required: false,
+      default: 0,
+    },
+    status: {
+      type: String,
+      required: false,
+      default: 'todo',
+    },
   },
   { timestamps: {} },
 );
 
-export default mongoose.model('Todo', todoSchema);
+export default mongoose.model('Card', todoSchema);
