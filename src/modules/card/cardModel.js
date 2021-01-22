@@ -20,7 +20,7 @@ const todoSchema = mongoose.Schema(
       default: 'todo',
     },
   },
-  { timestamps: {} },
+  { timestamps: {}, versionKey: false },
 );
 
 export default mongoose.model('Card', todoSchema);
