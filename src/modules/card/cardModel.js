@@ -3,7 +3,10 @@ import mongoose from 'mongoose';
 const todoSchema = mongoose.Schema(
   {
     _id: mongoose.Schema.Types.ObjectId,
-    name: { type: String, required: true },
+    name: {
+      type: String,
+      required: true,
+    },
     description: {
       type: String,
       required: false,
@@ -20,7 +23,7 @@ const todoSchema = mongoose.Schema(
       default: 'todo',
     },
   },
-  { timestamps: {}, versionKey: false },
+  { timestamps: {} },
 );
 
 export default mongoose.model('Card', todoSchema);
