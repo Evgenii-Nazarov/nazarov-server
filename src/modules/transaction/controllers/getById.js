@@ -3,7 +3,6 @@ import { get } from 'lodash';
 
 export default async function transactionGetById(req, res) {
   const transactionId = get(req, 'params.transactionId');
-  console.log(transactionId);
 
   Transaction.find({ _id: transactionId })
     .exec()
