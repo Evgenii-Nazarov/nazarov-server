@@ -9,10 +9,10 @@ export default function mongoConnection() {
     { useNewUrlParser: true, useUnifiedTopology: true },
   );
 
-  console.ingo('connect', res)
+  console.info('connect', res)
 
   mongoose.connection.on('error', (err) => {
-    console.ingo('error', err)
+    console.info('error', err)
     throw new Error('Unable to connect to database');
   });
 
