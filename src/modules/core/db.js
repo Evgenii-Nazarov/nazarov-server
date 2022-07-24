@@ -9,8 +9,6 @@ export default function mongoConnection() {
     { useNewUrlParser: true, useUnifiedTopology: true },
   );
 
-  console.info('connect', res)
-
   mongoose.connection.on('error', (err) => {
     console.info('error', err)
     throw new Error('Unable to connect to database');
